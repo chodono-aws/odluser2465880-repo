@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Image verion 2
 
 on:
   push:
@@ -112,4 +112,4 @@ jobs:
           WIZ_CLIENT_SECRET: ${{ secrets.WIZ_CLIENT_SECRET }}
         run: |
           IMAGE_URI=$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$REPOSITORY:$COMMIT_SHA
-          ./wizcli tag -i $IMAGE_URI
+          ./wizcli tag -$IMAGE_URI
